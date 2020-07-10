@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 # maven-project
-
+hello Ratnesh.
 Simple Maven Project
 =======
 # hello-world
