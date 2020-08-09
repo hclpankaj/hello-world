@@ -1,6 +1,3 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','-t', 'gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}','.']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['run', 'gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
-
+  args: ['build','-t', 'gcr.io/$project_id/hello-world:$TAG_NAME', '.']
