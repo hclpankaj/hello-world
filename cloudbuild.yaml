@@ -1,8 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/hello-world', '.']
+  args: ['build','-t', 'gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}','.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['run', 'gcr.io/$PROJECT_ID/hello-world']
-- name: 'gcr.io/cloud-builders/gsutil'
-  args: ['cp', '-r', 'k8s/*', 'gs://$PROJECT_ID-kubernetes-manifests']
-images: ['gcr.io/$PROJECT_ID/hello-world:$TAG_NAME']
+  args: ['run', 'gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
+
